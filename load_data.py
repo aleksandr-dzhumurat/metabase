@@ -27,7 +27,7 @@ with open(csv_file_path, 'r') as csv_file:
     header = next(csv_reader)  # Skip the header row
     for row in csv_reader:
         cursor.execute('''
-        INSERT INTO my_table (user_id, referrer, revenue, date, platform, store_id)
+        INSERT INTO purchases (user_id, referrer, revenue, date, platform, store_id)
         VALUES (?, ?, ?, ?, ?, ?)
         ''', row)
 
